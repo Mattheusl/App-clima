@@ -57,7 +57,7 @@ Referência no PRD:
 
 ## Tarefa 4 — Módulo de integração com Open-Meteo
 
-[] Criar um arquivo dedicado para encapsular as requisições à API Open-Meteo, com funções separadas para geocodificação e consulta de clima.
+[X] Criar um arquivo dedicado para encapsular as requisições à API Open-Meteo, com funções separadas para geocodificação e consulta de clima.
 
 Critério de aprovação:
 - Existe um módulo exclusivo para chamadas externas.
@@ -73,7 +73,7 @@ Referência no PRD:
 
 ## Tarefa 5 — Normalização e validação de dados
 
-[] Definir a lógica de validação para respostas da API, incluindo tratamento de entradas vazias, faltantes e incompletas.
+[X] Definir a lógica de validação para respostas da API, incluindo tratamento de entradas vazias, faltantes e incompletas.
 
 Critério de aprovação:
 - Dados vazios ou incompletos são tratados sem quebrar a interface.
@@ -88,7 +88,7 @@ Referência no PRD:
 
 ## Tarefa 6 — Estado de carregamento
 
-[] Implementar o estado de carregamento que aparece durante a busca da cidade e consulta do clima.
+[X] Implementar o estado de carregamento que aparece durante a busca da cidade e consulta do clima.
 
 Critério de aprovação:
 - Enquanto a busca está em andamento, o usuário vê feedback visual claro.
@@ -103,7 +103,7 @@ Referência no PRD:
 
 ## Tarefa 7 — Empty state
 
-[] Implementar a tela de estado vazio para quando a cidade não for encontrada ou quando os dados climáticos não estiverem disponíveis.
+[X] Implementar a tela de estado vazio para quando a cidade não for encontrada ou quando os dados climáticos não estiverem disponíveis.
 
 Critério de aprovação:
 - A aplicação mostra mensagem clara de ausência de resultado.
@@ -118,7 +118,7 @@ Referência no PRD:
 
 ## Tarefa 8 — Renderização dos dados da cidade e clima
 
-[] Implementar a lógica para renderizar os dados da cidade e do clima na interface, incluindo temperatura, cidade, dia/noite, chuva, código do país e weather code.
+[X] Implementar a lógica para renderizar os dados da cidade e do clima na interface, incluindo temperatura, cidade, dia/noite, chuva, código do país e weather code.
 
 Critério de aprovação:
 - Os dados essenciais aparecem na sidebar conforme o layout proposto.
@@ -133,7 +133,7 @@ Referência no PRD:
 
 ## Tarefa 9 — Renderização dos detalhes climáticos
 
-[] Implementar a área principal com os detalhes climáticos: umidade relativa, temperatura aparente, precipitação, velocidade e direção do vento.
+[X] Implementar a área principal com os detalhes climáticos: umidade relativa, temperatura aparente, precipitação, velocidade e direção do vento.
 
 Critério de aprovação:
 - Os dados da área principal são exibidos corretamente.
@@ -148,7 +148,7 @@ Referência no PRD:
 
 ## Tarefa 10 — Fluxo principal de busca do usuário
 
-[] Integrar a busca do usuário com toda a chain de execução: input → geocodificação → clima → renderização/estado de erro.
+[X] Integrar a busca do usuário com toda a chain de execução: input → geocodificação → clima → renderização/estado de erro.
 
 Critério de aprovação:
 - O usuário digita uma cidade e aciona a busca.
@@ -164,7 +164,7 @@ Referência no PRD:
 
 ## Tarefa 11 — Ajustes finais e validação da aplicação
 
-[] Revisar o comportamento global da aplicação, corrigir inconsistências visuais e validar o fluxo completo em cenário real de uso.
+[X] Revisar o comportamento global da aplicação, corrigir inconsistências visuais e validar o fluxo completo em cenário real de uso.
 
 Critério de aprovação:
 - A aplicação está estável em cenário de sucesso e falha.
@@ -179,7 +179,7 @@ Referência no PRD:
 
 ## Tarefa 12 — Documentação final e handoff para agentes
 
-[] Preparar o documento final de apoio para manutenção, incluindo estado atual do projeto, pontos de extensão e próximos passos.
+[X] Preparar o documento final de apoio para manutenção, incluindo estado atual do projeto, pontos de extensão e próximos passos.
 
 Critério de aprovação:
 - A documentação explica como a aplicação funciona e onde cada parte do código deve ficar.
@@ -188,3 +188,47 @@ Critério de aprovação:
 
 Referência no PRD:
 - Arquitetura técnica, escopo e conclusão em [prd.md](prd.md)
+
+---
+
+## Fase 3 — Refinamento da experiência e UX
+
+## Tarefa 13 — Estado inicial neutro sem mensagens prematuras
+
+[X] Ajustar a tela inicial para mostrar um estado neutro antes da primeira busca, sem anunciar falha ou ausência de dados antes do usuário pesquisar.
+
+Critério de aprovação:
+- A página carrega mostrando uma mensagem amigável e neutra, sem texto de "não encontrado".
+- A interface não infere falha antes do tempo.
+- O usuário entende que ele deve buscar uma cidade para ver o clima.
+
+Referência no PRD:
+- Requisitos visuais e UX em [prd.md](prd.md)
+
+---
+
+## Tarefa 14 — Busca por cidade/estado com maior precisão
+
+[X] Melhorar a busca para aceitar combinações como cidade + estado/UF e priorizar resultados mais específicos e coerentes.
+
+Critério de aprovação:
+- Consultas como "São Paulo SP" e "Campinas SP" são bem interpretadas.
+- A aplicação prioriza resultados com nome e estado/UF mais próximos da busca.
+- O fluxo continua natural e sem quebra na experiência.
+
+Referência no PRD:
+- Regras de negócio, fluxo de usuário e geocodificação em [prd.md](prd.md)
+
+---
+
+## Tarefa 15 — Ajustes finais de fluidez e naturalidade
+
+[X] Refinar os textos e comportamentos da interface para melhorar a naturalidade do uso e reduzir distrações no momento da pesquisa.
+
+Critério de aprovação:
+- A interface não mostra mensagens de erro antes do início efetivo da pesquisa.
+- Os textos são claros, curtos e confiáveis.
+- A experiência permanece fluida em mobile e desktop.
+
+Referência no PRD:
+- Requisitos visuais, UX e critérios de aceitação em [prd.md](prd.md)
