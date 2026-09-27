@@ -26,8 +26,8 @@ app.innerHTML = `
           id="city-search"
           name="city"
           type="text"
-          placeholder="Digite cidade, estado ou cidade, UF"
-          aria-label="Digite cidade, estado ou cidade, UF"
+          placeholder="Digite cidade"
+          aria-label="Digite cidade"
         />
         <button type="submit">Buscar</button>
       </form>
